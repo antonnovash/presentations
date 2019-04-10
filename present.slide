@@ -1,0 +1,68 @@
+HTTP and ServeMux
+11 April 2019
+
+Novash Anton
+Golang developer, iTechArt
+Anton.Novash@itechart-group.com
+
+* В чём отличие?
+- HTTP
+.code code1
+
+- ServeMux
+.code code2
+
+- GorillaMux
+.code code3
+
+* Где-то есть вообще это?
+MapReduce Programs In Google Source Tree
+
+* Окей, а причём тут Go?
+
+* Gleam
+- High Performance
+- Memory Efficient
+- Flexible
+- Easy to Customize
+(c) gleam developers
+
+* Gleam
+
+вывод:
+
+* Gleam
+
+* Gleam
+
+*
+*Gleam* *Driver*:
+та часть, которую пишем
+*Gleam* *Master*:
+хранит приходящую информацию о ресурсах
+управляет запросами driver'а на выделение нужных agent'ов
+*Gleam* *Agent*:
+переодически отправляют инфу master'у о использовании ресурсов
+стартует executor
+управляет dataset'ами от executor'ов
+*Gleam* *Executor*:
+стартуются agent'ами
+читают информацию с dataset'ов и генерируют вывод в новый dataset
+*Dataset*:
+контролируется agent'ами
+по умолчанию вся информация находится в памяти и в сети, опционально может быть записана на диск
+
+* Gleam Master
+
+* Gleam Agent
+
+* Gleam distributed word count
+
+* Gleam и docker
+.link https://github.com/chrislusf/gleam/wiki/Gleam-on-Docker-Composed-Containers линка
+
+* Links
+
+.link https://github.com/chrislusf/gleam Gleam
+.link https://appliedgo.net/mapreduce/ велосипед
+.link https://github.com/ahamidi/go-mapreduce/blob/master/mapreduce.go симплвершн

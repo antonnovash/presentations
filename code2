@@ -1,0 +1,7 @@
+func main() {
+  mux := http.NewServeMux()
+
+  mux.HandleFunc("/page2", Page2)
+  mux.HandleFunc("/", Index)
+  http.ListenAndServe(":3000", mux)
+}
