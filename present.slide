@@ -5,20 +5,19 @@ Novash Anton
 Golang developer, iTechArt
 Anton.Novash@itechart-group.com
 
-* В чём отличие?
-- HTTP
+* Package net/http
+
+-Http
 .code code1
 
 - ServeMux
 .code code2
 
-- GorillaMux
+*Package GorillaMux
 .code code3
 
-* Где-то есть вообще это?
-MapReduce Programs In Google Source Tree
+.link https://github.com/gorilla/mux ccылка на gorilla/mux
 
-* Окей, а причём тут Go?
 
 * Gleam
 - High Performance
