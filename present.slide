@@ -7,61 +7,39 @@ Anton.Novash@itechart-group.com
 
 * Package net/http
 
--Http
+- Http
 .code code1
 
 - ServeMux
 .code code2
 
-*Package GorillaMux
+* Type ServeMux
+
+.code code5
+
+* PageNotFound
+
+.code code7
+.code code4
+
+* How to set DefaultServeMux?
+
+.code code6
+
+* The above call to ServeHTTP() calls the following implementation of ServeHTTP():
+
+.code code8
+
+* The call to Handler() function then calls the following implementation:
+
+.code code9
+
+* match()
+
+.code code10
+
+- mux.m is a a map data structure defined in the ServeMux structure (snippet earlier in the post) which stores a mapping of a path and the handler we have registered for it.
+* Package GorillaMux
 .code code3
 
 .link https://github.com/gorilla/mux ccылка на gorilla/mux
-
-
-* Gleam
-- High Performance
-- Memory Efficient
-- Flexible
-- Easy to Customize
-(c) gleam developers
-
-* Gleam
-
-вывод:
-
-* Gleam
-
-* Gleam
-
-*
-*Gleam* *Driver*:
-та часть, которую пишем
-*Gleam* *Master*:
-хранит приходящую информацию о ресурсах
-управляет запросами driver'а на выделение нужных agent'ов
-*Gleam* *Agent*:
-переодически отправляют инфу master'у о использовании ресурсов
-стартует executor
-управляет dataset'ами от executor'ов
-*Gleam* *Executor*:
-стартуются agent'ами
-читают информацию с dataset'ов и генерируют вывод в новый dataset
-*Dataset*:
-контролируется agent'ами
-по умолчанию вся информация находится в памяти и в сети, опционально может быть записана на диск
-
-* Gleam Master
-
-* Gleam Agent
-
-* Gleam distributed word count
-
-* Gleam и docker
-.link https://github.com/chrislusf/gleam/wiki/Gleam-on-Docker-Composed-Containers линка
-
-* Links
-
-.link https://github.com/chrislusf/gleam Gleam
-.link https://appliedgo.net/mapreduce/ велосипед
-.link https://github.com/ahamidi/go-mapreduce/blob/master/mapreduce.go симплвершн

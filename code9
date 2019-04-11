@@ -1,0 +1,14 @@
+// If there is no registered handler that applies to the request,
+// Handler returns a ``page not found'' handler and an empty pattern.
+func (mux *ServeMux) Handler(r *Request) (h Handler, pattern string) {
+        if r.Method != "CONNECT" {
+                if p := cleanPath(r.URL.Path); p != r.URL.Path {
+                        _, pattern = mux.handler(r.Host, p)
+                        url := *r.URL
+                        url.Path = p
+                        return RedirectHandler(url.String(), StatusMovedPermanently), pattern
+                }
+        }
+
+        return mux.handler(r.Host, r.URL.Path)
+}
